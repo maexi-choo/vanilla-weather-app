@@ -1,0 +1,56 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(135, 135, 135);
+}
+
+li {
+  list-style: none;
+  text-align: left;
+}
+
+.weather-app {
+  max-width: 850px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  padding-bottom: 3px;
+  text-align: center;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+}
+
+.opening-line {
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.weather-detail {
+  font-size: 20px;
+}
+
+.weather-detail-icon,
+.weather-detail-temp {
+  font-size: 60px;
+}
+
+.weather-detail-day-date,
+.weather-detail-other {
+  font-size: 15px;
+}
+
+.weather-detail-other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.change-metric {
+  padding-top: 30px;
+}
+
+.footnote {
+  text-align: center;
+  font-size: small;
+}
