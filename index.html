@@ -20,6 +20,7 @@
       src="https://kit.fontawesome.com/6577a0882b.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla Weather App</title>
   </head>
@@ -29,21 +30,21 @@
         <div class="weather-app">
           <div class="opening-line">
             Right now in
-            <span class="location">Warsaw</span>
-            , it's mostly cloudy
+            <span class="location" id="city"></span>
+            , it's <span class="description" id="condition"></span>
           </div>
           <div class="row weather-detail">
             <div class="col-4 weather-detail-icon">
               <i class="fa-solid fa-cloud"></i>
             </div>
             <div class="col-4 weather-detail-wrapper">
-              <div class="weather-detail-temp">20</div>
+              <div class="weather-detail-temp" id="temperature"></div>
               <div class="col weather-detail-day-date">Wednesday 12pm</div>
             </div>
             <div class="col-4 weather-detail-other">
               <ul>
-                <li>Humidity: 63%</li>
-                <li>Wind: 5km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
             </div>
           </div>
