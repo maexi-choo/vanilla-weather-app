@@ -25,31 +25,37 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="opening-line">Right now in Warsaw, it's mostly cloudy</div>
-        <div class="row weather-detail">
-          <div class="col-4 weather-detail-icon">
-            <i class="fa-solid fa-cloud"></i>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="opening-line">
+            Right now in
+            <span class="location">Warsaw</span>
+            , it's mostly cloudy
           </div>
-          <div class="col-4 weather-detail-temp">
-            20°C
-            <div class="col weather-detail-day-date">Wednesday 12pm</div>
+          <div class="row weather-detail">
+            <div class="col-4 weather-detail-icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <div class="col-4 weather-detail-wrapper">
+              <div class="weather-detail-temp">20</div>
+              <div class="col weather-detail-day-date">Wednesday 12pm</div>
+            </div>
+            <div class="col-4 weather-detail-other">
+              <ul>
+                <li>Humidity: 63%</li>
+                <li>Wind: 5km/h</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-4 weather-detail-other">
-            <ul>
-              <li>Humidity: 63%</li>
-              <li>Wind: 5km/h</li>
-            </ul>
-          </div>
+          <div class="units">C° | F°</div>
         </div>
-        <div class="change-metric">C° | F°</div>
-      </div>
-      <div class="footnote">
-        <a
-          href="https://github.com/maexi-choo/vanilla-weather-app"
-          target="_blank"
-          >Open-source code</a
-        >, by Mae-Xi Choo
+        <div class="footnote">
+          <a
+            href="https://github.com/maexi-choo/vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >, by Mae-Xi Choo
+        </div>
       </div>
     </div>
     <script src="src/script.js"></script>
