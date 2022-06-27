@@ -47,7 +47,7 @@ li {
   text-transform: lowercase;
 }
 
-.weather-detail-day-date,
+.weather-detail-day,
 .weather-detail-other {
   font-size: 15px;
 }
