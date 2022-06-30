@@ -21,7 +21,23 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayTemperature(response) {
+function searchCity(city) {
+  let apiKey = "78b9c2b6536d0f18b1f6d06979e11cbe";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
+}
+searchCity("Warsaw");
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", handleSubmit);
+
+function displayWeather(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -42,9 +58,3 @@ function displayTemperature(response) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 }
-
-let apiKey = "78b9c2b6536d0f18b1f6d06979e11cbe";
-let city = "warsaw";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displayTemperature);

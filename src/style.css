@@ -14,6 +14,7 @@ li {
 }
 
 .weather-app {
+  max-width: 850px;
   margin-top: 50px;
   padding: 20px;
   padding-bottom: 3px;
@@ -22,9 +23,20 @@ li {
   border-radius: 10px;
 }
 
+.search-bar {
+  max-width: 850px;
+}
+
+.search-input,
+.btn-search,
+.btn-cur-location {
+  margin: 0;
+  display: inline;
+}
+
 .opening-line {
-  padding: 20px;
-  font-size: 30px;
+  padding: 5px 20px 20px 20px;
+  font-size: 45px;
   font-weight: 500;
   line-height: 25px;
 }
@@ -41,13 +53,15 @@ li {
 .location,
 .weather-detail-temp {
   color: black;
+  padding-top: 40px;
 }
 
 .description {
-  text-transform: lowercase;
+  font-size: 15px;
+  text-transform: capitalize;
 }
 
-.weather-detail-day,
+.weather-detail-min-max,
 .weather-detail-other {
   font-size: 15px;
 }
@@ -59,11 +73,13 @@ li {
 }
 
 .units {
-  padding-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+.last-update,
 .footnote {
   text-align: center;
   font-size: small;
-  padding: 10px;
+  padding: 5px;
 }
