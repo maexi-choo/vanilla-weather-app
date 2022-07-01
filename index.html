@@ -48,9 +48,10 @@
                 </div>
                 <div class="col-3">
                   <input
-                    type="submit"
+                    type="click"
                     class="btn btn-primary btn-cur-location"
                     value="Current Location"
+                    id="current-location-button"
                   />
                 </div>
               </div>
@@ -66,7 +67,8 @@
             </div>
             <div class="col-4 weather-detail-wrapper">
               <div class="weather-detail-temp" id="temperature"></div>
-              <div class="col weather-min-max"></div>
+              <span class="weather-min" id="tempMin"></span> |
+              <span class="weather-max" id="tempMax"></span>
             </div>
             <div class="col-4 weather-detail-other">
               <ul>

@@ -27,11 +27,13 @@ li {
   max-width: 850px;
 }
 
-.search-input,
+.search-input {
+  max-width: 400px;
+}
+
 .btn-search,
 .btn-cur-location {
-  margin: 0;
-  display: inline;
+  max-width: fit-content;
 }
 
 .opening-line {
@@ -50,13 +52,19 @@ li {
   font-size: 60px;
 }
 
-.location,
-.weather-detail-temp {
+.location {
   color: black;
   padding-top: 40px;
 }
 
-.description {
+.weather-detail-temp {
+  color: black;
+  padding-top: 6px;
+}
+
+.description,
+.weather-max,
+.weather-min {
   font-size: 15px;
   text-transform: capitalize;
 }
@@ -66,6 +74,11 @@ li {
   font-size: 15px;
 }
 
+.weather-detail-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
 .weather-detail-other {
   display: flex;
   justify-content: center;
@@ -73,8 +86,8 @@ li {
 }
 
 .units {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 5px;
 }
 
 .last-update,
