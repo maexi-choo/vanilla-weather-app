@@ -57,6 +57,16 @@ li {
   padding-top: 40px;
 }
 
+.units .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
+
 .weather-detail-temp {
   color: black;
   padding-top: 6px;

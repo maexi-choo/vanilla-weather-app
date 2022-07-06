@@ -26,7 +26,6 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
-searchCity("Warsaw");
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -34,14 +33,11 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-let form = document.querySelector("#searchForm");
-form.addEventListener("submit", handleSubmit);
-
 function displayWeather(response) {
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  console.log(response);
+  celciusTemperature = response.data.main.temp;
+
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celciusTemperature);
   document.querySelector("#tempMin").innerHTML = Math.round(
     response.data.main.temp_min
   );
@@ -77,5 +73,32 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
+}
+
+function showCelciusTemperature(event) {
+  event.preventDefault;
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
+
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", handleSubmit);
+
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let fahrenheitLinkElement = document.querySelector("#fahrenheitLink");
+fahrenheitLinkElement.addEventListener("click", showFahrenheitTemperature);
+
+let celciusLinkElement = document.querySelector("#celciusLink");
+celciusLinkElement.addEventListener("click", showCelciusTemperature);
+
+searchCity("Warsaw");
